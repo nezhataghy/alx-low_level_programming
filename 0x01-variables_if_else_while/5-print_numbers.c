@@ -3,20 +3,18 @@
 /**
  * main - Entry point
  *
- * Description: Display all alphabet except eq
+ * Description: Display numbers 0-9
  *
  * Return: Always 0 for (success)
 */
 
 int main(void)
 {
-int i = 97;
+int i = 0;
 
-while (i < 123)
+while (i < 10)
 {
-	if (i == 101 || i == 113)
-		i++;
-	putchar(i);
+	printf("%d", i);
 	i++;
 }
 putchar('\n');
