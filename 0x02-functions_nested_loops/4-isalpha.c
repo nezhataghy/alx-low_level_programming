@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 /**
  * _isalpha - checks for a letter
