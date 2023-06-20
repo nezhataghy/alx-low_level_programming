@@ -14,8 +14,9 @@ int main(void)
 {
 	int n = 0;
 	char la_fonction[] = "_putchar";
+	int m = strlen(la_fonction);
 
-	while (!(n > strlen(la_fonction)))
+	while (n < m)
 	{
 		_putchar(la_fonction[n]);
 		n++;
