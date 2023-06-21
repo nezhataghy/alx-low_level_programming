@@ -13,11 +13,11 @@ if (num < 99)
 {
 	for (m = num; m < 98; m++)
 		printf("%d, ", m);
-	printf("98\n");
+printf("98\n");
 }
 else
 {
-for (m = num; m > 98; m--)
-	printf("%d, ", m);
+	for (m = num; m > 98; m--)
+		printf("%d, ", m);
 }
 }
