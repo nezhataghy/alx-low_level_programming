@@ -16,7 +16,7 @@ while (1)
 	somme = fib1 + fib2;
 	if (somme > 4000000)
 		break;
-	if ((somme & 2) == 0)
+	if ((somme % 2) == 0)
 		tot += somme;
 
 	fib1 = fib2;
