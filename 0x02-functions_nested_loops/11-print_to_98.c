@@ -9,15 +9,11 @@ void print_to_98(int num)
 {
 int m;
 
-if (num < 99)
-{
+if (num < 98)
 	for (m = num; m < 98; m++)
 		printf("%d, ", m);
-printf("98\n");
-}
 else
-{
 	for (m = num; m > 98; m--)
 		printf("%d, ", m);
-}
+printf("98\n");
 }
