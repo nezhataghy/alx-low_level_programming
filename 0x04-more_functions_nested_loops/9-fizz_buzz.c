@@ -19,9 +19,9 @@ for (nez = 1; nez <= 100; nez++)
 		printf("Fizz ");
 	else if (nez % 5 == 0)
 		printf("Buzz ");
-	else
+	else if (nez != 100)
 		printf("%d ", nez);
 }
-printf("\n");
+printf("100\n");
 return (0);
 }
