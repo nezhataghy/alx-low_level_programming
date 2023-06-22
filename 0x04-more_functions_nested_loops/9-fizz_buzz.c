@@ -22,6 +22,7 @@ for (nez = 1; nez <= 100; nez++)
 	else if (nez != 100)
 		printf("%d ", nez);
 }
-printf("100\n");
+printf("100");
+putchar('\n');
 return (0);
 }
