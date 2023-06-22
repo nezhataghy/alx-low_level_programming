@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - FizzBuzz
@@ -14,15 +15,18 @@ int nez;
 for (nez = 1; nez <= 100; nez++)
 {
 	if ((nez % 3 == 0) && (nez % 5 == 0))
-		printf("FizzBuzz ");
+		printf("FizzBuzz");
 	else if (nez % 3 == 0)
-		printf("Fizz ");
+		printf("Fizz");
 	else if (nez % 5 == 0)
-		printf("Buzz ");
-	else if (nez != 100)
-		printf("%d ", nez);
+		printf("Buzz");
+	else
+		printf("%d", nez);
+	if (nez == 100)
+		putchar('\n');
+	else
+putchar(' ');
 }
-printf("100");
-putchar('\n');
 return (0);
 }
+
