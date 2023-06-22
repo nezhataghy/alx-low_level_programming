@@ -11,8 +11,8 @@ int i = 48;
 
 while (i < 58)
 {
-	putchar(i);
+	_putchar(i);
 	i++;
 }
-putchar('\n');
+_putchar('\n');
 }
