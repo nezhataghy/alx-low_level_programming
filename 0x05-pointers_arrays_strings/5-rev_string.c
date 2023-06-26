@@ -19,8 +19,8 @@ l--;
 while (i < l / 2)
 {
 	c = s[i];
-	s[i] = s[l - i];
-	s[l - i] = c;
+	s[i] = s[l - 1 - i];
+	s[l - 1 - i] = c;
 	i++;
 }
 }
