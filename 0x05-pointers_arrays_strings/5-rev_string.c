@@ -14,7 +14,6 @@ while (s[l])
 {
 	l++;
 }
-l--;
 
 while (i < l / 2)
 {
