@@ -16,7 +16,7 @@ l = 0;
 while (dest[l])
 	l++;
 for (l2 = 0; src[l2]; l2++)
-	dest[l++] = src[l2]
+	dest[l++] = src[l2];
 
 return (dest);
 }
