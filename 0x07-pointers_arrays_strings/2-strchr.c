@@ -19,6 +19,7 @@ char *_strchr(char *s, char c)
 			return (&s[comp]);
 	}
 	if (comp == '\0')
-		return (&s[comp]);
+		return (s);
+
 	return (NULL);
 }
