@@ -13,6 +13,7 @@
 char *_strchr(char *s, char c)
 {
 	int comp;
+
 	for (comp = 0; s[comp] >= '\0'; comp++)
 	{
 		if (s[comp] == c)
