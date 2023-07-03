@@ -14,13 +14,13 @@ char *_strpbrk(char *s, char *accept)
 	int comp;
 
 	while (*s)
+	{
+		for (comp = 0; accept[comp]; comp++)
 		{
-			for (comp = 0; accept[comp]; comp++)
-			{
-				if (*s == accept[comp])
-					return (s);
-			}
-			s++;
+			if (*s == accept[comp])
+				return (s);
 		}
+		s++;
+	}
 	return (NULL);
 }
