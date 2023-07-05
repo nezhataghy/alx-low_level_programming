@@ -16,7 +16,7 @@ if (*s)
 return (length);
 }
 /**
- * pal_checker - check if s is palindrome.
+ * pal_test - check if s is palindrome.
  * @s: string base address.
  * @i: left index.
  * @j: rigth index.
