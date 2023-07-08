@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	total = strtol(argv[1], &pointer, 10);
 	count = 0;
 
-	if (!*p)
+	if (!*pointer)
 	{
 		while (total > 1)
 		{
