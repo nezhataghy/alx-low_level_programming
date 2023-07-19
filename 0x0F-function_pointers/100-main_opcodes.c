@@ -25,7 +25,7 @@ if (n_bytes < 0)
 for (num = 0; num < n_bytes; num++)
 {
 	printf("%.2hhx", p[num]);
-	if (i < n_bytes - 1)
+	if (num < n_bytes - 1)
 		printf(" ");
 }
 printf("\n");
