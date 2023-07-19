@@ -17,3 +17,4 @@ if (array != NULL && action != NULL)
 		action(array[index]);
 	}
 }
+}
