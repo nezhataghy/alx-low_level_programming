@@ -1,6 +1,5 @@
 #ifndef _HEADER_H
 #define _HEADER_H
-#include <stdio.h>
 /**
  * struct op - Struct op
  * @op: The operator
