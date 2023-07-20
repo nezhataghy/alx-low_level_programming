@@ -9,8 +9,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 
 	unsigned int index = 0;
-
 	va_list list_ptr;
+	char *chaine;
 
 	va_start(list_ptr, n);
 
@@ -19,9 +19,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	while (index < n)
 	{
-		if (!va_arg(list_ptr, unsigned int))
-			va_arg(list_ptr, unsigned int) = "(nil)";
-		printf("%s", va_arg(list_ptr, unsigned int));
+		chaine = va_arg(list_ptr, char*);
+		if (!chaine)
+			chaine = "(nil)";
+		printf("%s", chaine);
 		if (index < n - 1)
 			printf("%s", separator);
 		index++;
