@@ -1,14 +1,15 @@
 #include "variadic_functions.h"
 /**
-  * print_numbers -  prints numbers, followed
+  * print_strings -  prints strings, followed
   * by a new line
   * @separator : input string
   * @n: input number of arg
   */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 
 	unsigned int index = 0;
+
 	va_list list_ptr;
 
 	va_start(list_ptr, n);
@@ -18,8 +19,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	while (index < n)
 	{
-		printf("%d", va_arg(list_ptr, unsigned int));
-		if (index != n)
+		if (!va_arg(list_ptr, unsigned int))
+			va_arg(list_ptr, unsigned int) = "(nil)";
+		printf("%s", va_arg(list_ptr, unsigned int));
+		if (index < n - 1)
 			printf("%s", separator);
 		index++;
 	}
