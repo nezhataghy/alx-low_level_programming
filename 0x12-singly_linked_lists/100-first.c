@@ -7,6 +7,6 @@ void Beforemain(void) __attribute__ ((constructor));
  */
 void Beforemain(void)
 {
-	puts("You're beat! and yet, you must allow,\n");
-	puts("I bore my house upon my back!\n");
+	puts("You're beat! and yet, you must allow,");
+	puts("I bore my house upon my back!");
 }
