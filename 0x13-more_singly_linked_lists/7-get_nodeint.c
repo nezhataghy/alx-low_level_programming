@@ -5,7 +5,7 @@
  *  of a listint_t linked list
  * @head: head pointer as input
  * @index: index of the node
- * Return: pointer to index
+ * Return: the nth node
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
