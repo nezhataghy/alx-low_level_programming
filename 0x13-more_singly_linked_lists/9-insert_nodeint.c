@@ -29,13 +29,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	traverse = *head;
 
-	while (idx > 1 && traverse)
+	while (idx > 1 && *head)
 	{
-		traverse = traverse->next;
+		traverse = (*head)->next;
 		idx--;
 	}
 
-	if (!traverse)
+	if (!(*head))
 	{
 		free(new_node);
 		return (NULL);
