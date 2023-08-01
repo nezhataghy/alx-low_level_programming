@@ -1,49 +1,39 @@
 #include "lists.h"
-
 /**
- * insert_nodeint_at_index - Inserts a new node at a given position
- * @head: Pointer to the head pointer
- * @idx: Index where the node should be added
- * @n: The data inserted in the node
- *
- * Return: The address of the new node, OTHERWISE return NULL
+ * insert_nodeint_at_index - inserts a new node at a given postion
+ * @head: pointer to head
+ * @idx: index
+ * @n: new node data
+ * Return: the address of the new node, or NULL if it failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new_node, *traverse;
+	unsigned int i = 0;
+	listint_t *ptr, *ptr_tmp = *head;
 
-	new_node = malloc(sizeof(listint_t));
-	if (!new_node)
-	{
+	ptr = malloc(sizeof(listint_t));
+	if (ptr == NULL || head == NULL)
 		return (NULL);
-	}
+	ptr->n = n;
+	ptr->next = NULL;
 
-	new_node->n = n;
-
-	if (!*head)
-		new_node->next = NULL;
-	else if (*head && idx == 0)
+	if (idx)
 	{
-		new_node->next = *head;
-		*head = new_node;
-		return (new_node);
+		while (i < idx - 1 && ptr_tmp != NULL)
+		{
+			ptr_tmp = ptr_tmp->next;
+			i++;
+		}
+		if (ptr_tmp == NULL)
+			return (NULL);
 	}
-
-	while (idx > 1 && *head)
+	else
 	{
-		traverse = (*head)->next;
-		idx--;
-		*head = traverse;
+		ptr->next = *head;
+		*head = ptr;
+		return (ptr);
 	}
-
-	if (!traverse)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->next = traverse->next;
-	traverse->next = new_node;
-
-	return (new_node);
+	ptr->next = ptr_tmp->next;
+	ptr_tmp->next = ptr;
+	return (ptr);
 }
