@@ -1,6 +1,5 @@
 #include "search_algos.h"
 
-
 /**
  * linear_search - Looks for a value in an array
  * @array: list of integers
@@ -21,7 +20,7 @@ int linear_search(int *array, size_t size, int value)
 		printf("Value checked array[%lu] = [%d]\n", index, array[index]);
 		if (array[index] == value)
 			return (index);
-        index++;
+		index++;
 	}
 	return (-1);
 }
