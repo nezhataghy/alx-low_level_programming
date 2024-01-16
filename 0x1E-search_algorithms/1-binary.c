@@ -18,7 +18,7 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	return binary_search_recursive(array, l, r, value);
+	return (binary_search_recursive(array, l, r, value));
 }
 
 /**
@@ -48,12 +48,12 @@ int binary_search_recursive(int *array, size_t l, size_t r, int value)
 		m = (l + r) / 2;
 
 		if (array[m] == value)
-			return m;
+			return (m);
 		else if (array[m] < value)
-			return binary_search_recursive(array, m + 1, r, value);
+			return (binary_search_recursive(array, m + 1, r, value));
 		else
-			return binary_search_recursive(array, l, m - 1, value);
+			return (binary_search_recursive(array, l, m - 1, value));
 	}
 
-	return -1;
+	return (-1);
 }
